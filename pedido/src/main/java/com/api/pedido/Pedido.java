@@ -17,18 +17,18 @@ public class Pedido implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
-	private long id_cliente;
-	
+	private long id;
+			
 	private double total_pedido;
 	
 	private String end_entrega;
 
-	public long getId_cliente() {
-		return id_cliente;
+	public long getId() {
+		return id;
 	}
 
-	public void setId_cliente(long id_cliente) {
-		this.id_cliente = id_cliente;
+	public void setId(long id_cliente) {
+		this.id = id_cliente;
 	}
 
 	public double getTotal_pedido() {
