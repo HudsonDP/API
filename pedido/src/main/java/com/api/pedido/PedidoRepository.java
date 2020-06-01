@@ -1,9 +1,9 @@
 package com.api.pedido;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface PedidoRepository extends JpaRepository<Pedido, Long>{
+public interface PedidoRepository extends CrudRepository<PedidoModels, Long>{
 	
-	Pedido findById(long id);	
+	PedidoModels findById(int id);	
 
 }

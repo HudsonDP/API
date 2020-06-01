@@ -9,8 +9,7 @@ public class ApiController{
 	@GetMapping("/endpoint")
 	public String index() {
 		
-		return "TA SHOW!";
+		return "OK...";
 		
 	}
-	
 }

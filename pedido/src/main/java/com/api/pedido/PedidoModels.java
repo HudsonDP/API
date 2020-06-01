@@ -8,17 +8,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name="TB_PEDIDO")
-public class Pedido implements Serializable{
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = PedidoModels.class)
+public class PedidoModels implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
-	private long id;
-			
+	private int id;
+		
 	private double total_pedido;
 	
 	private String end_entrega;
@@ -27,8 +31,8 @@ public class Pedido implements Serializable{
 		return id;
 	}
 
-	public void setId(long id_cliente) {
-		this.id = id_cliente;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public double getTotal_pedido() {
@@ -46,6 +50,4 @@ public class Pedido implements Serializable{
 	public void setEnd_entrega(String end_entrega) {
 		this.end_entrega = end_entrega;
 	}
-	
-
 }
