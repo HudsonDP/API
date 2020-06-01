@@ -27,7 +27,7 @@ public class PedidoModels implements Serializable{
 	
 	private String end_entrega;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
