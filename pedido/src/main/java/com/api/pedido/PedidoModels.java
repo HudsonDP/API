@@ -22,6 +22,10 @@ public class PedidoModels implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	private int id;
+	
+	private int id_cliente;
+
+	private String id_produto;
 		
 	private double total_pedido;
 	
@@ -50,4 +54,21 @@ public class PedidoModels implements Serializable{
 	public void setEnd_entrega(String end_entrega) {
 		this.end_entrega = end_entrega;
 	}
+	
+	public int getId_cliente() {
+		return id_cliente;
+	}
+
+	public void setId_cliente(int id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+	
+	public String getId_produto() {
+		return id_produto;
+	}
+
+	public void setId_produto(String id_produto) {
+		this.id_produto = id_produto;
+	}
+
 }
